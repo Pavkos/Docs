@@ -64,6 +64,15 @@ a:hover {
   padding: 72px 0 44px;
 }
 
+.app-icon {
+  width: 96px;
+  height: 96px;
+  border-radius: 22px;
+  display: block;
+  margin-bottom: 24px;
+  box-shadow: 0 18px 45px rgba(23, 28, 48, .14);
+}
+
 .eyebrow {
   color: var(--indigo);
   font-weight: 760;
@@ -208,4 +217,3 @@ code {
     padding: 20px;
   }
 }
-
