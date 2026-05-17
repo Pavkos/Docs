@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Privacy Policy — SpeachTutor</title>
+  <title>Privacy Policy — Speak English AI Tutor</title>
   <style>
     :root { color-scheme: light dark; --fg: #18181b; --muted: #52525b; --acc: #5558e3; --bg: #fff; }
     @media (prefers-color-scheme: dark) {
@@ -22,11 +22,11 @@
 </head>
 <body>
   <h1>Privacy Policy</h1>
-  <p class="meta"><strong>SpeachTutor</strong> · Last updated: <time datetime="2026-04-21">21 April 2026</time></p>
+  <p class="meta"><strong>Speak English AI Tutor</strong> · Last updated: <time datetime="2026-05-17">17 May 2026</time></p>
 
-  <p>This Privacy Policy describes how <strong>SpeachTutor</strong> (“we”, “us”, “our”) collects, uses, and shares information when you use our mobile application for iOS (the “App”) and related services (together, the “Services”).</p>
+  <p>This Privacy Policy describes how <strong>Speak English AI Tutor</strong> (“Speak English AI Tutor”, “we”, “us”, “our”) collects, uses, and shares information when you use our mobile application for iOS (the “App”) and related services (together, the “Services”).</p>
 
-  <p class="note"><strong>Operator.</strong> Replace this paragraph with your legal name, registered address, and contact email (e.g. <em>privacy@speachtutor.app</em>) before relying on this document in production.</p>
+  <p class="note"><strong>Operator.</strong> Speak English AI Tutor is operated by Pavel Korkodinov. For privacy-related questions, contact <a href="mailto:ikorkod@gmail.com">ikorkod@gmail.com</a>.</p>
 
   <h2>1. Information we collect</h2>
   <ul>
@@ -46,14 +46,64 @@
   </ul>
 
   <h2>3. AI and third-party services</h2>
-  <p>To deliver the Services we use infrastructure and subprocessors, which may process your content on our instructions. These may include, depending on configuration:</p>
+  <p>Before the App sends lesson content to AI or speech-processing providers, it shows an in-app consent screen explaining what will be sent and who will process it. If you do not agree, you can keep using non-recording parts of the App, but lesson analysis and AI practice will not run.</p>
+  <p>When you ask the App to analyse a recording, import audio, run AI practice, or generate exercises, the following personal content may be sent through our Supabase backend to third-party processors:</p>
+  <ul>
+    <li>lesson audio files and short voice recordings;</li>
+    <li>transcripts generated from that audio;</li>
+    <li>lesson metadata you choose or that the App derives, such as level, language preference, target vocabulary, mistakes, corrections, and practice context;</li>
+    <li>AI conversation turns when you use live AI practice or speaking drills.</li>
+  </ul>
+  <p>To deliver the Services we use infrastructure and subprocessors, which process your content only on our instructions and under contractual or technical safeguards designed to provide the same or equivalent protection for your data. These may include, depending on configuration:</p>
   <ul>
     <li><strong>Supabase</strong> — authentication, database, and related cloud infrastructure;</li>
-    <li><strong>Speech-to-text providers</strong> (e.g. Deepgram or similar) — to transcribe audio you submit;</li>
-    <li><strong>Large language model providers</strong> (e.g. Anthropic Claude or similar) — to generate structured lesson analysis and coaching output from transcripts and related text;</li>
+    <li><strong>Deepgram</strong> — to transcribe audio you submit;</li>
+    <li><strong>Anthropic Claude</strong> — to generate structured lesson analysis, corrections, explanations, exercises, and coaching output from transcripts and related text;</li>
+    <li><strong>OpenAI</strong> — to power live AI voice practice, speaking drills, and related AI responses when those features are used;</li>
     <li><strong>Apple</strong> — Sign in with Apple, App Store, and subscription handling.</li>
   </ul>
-  <p>We select providers with appropriate safeguards, but their processing is also governed by their respective privacy policies.</p>
+  <p>We do not sell this data, use it for third-party advertising, or use it for cross-app tracking. We do not intentionally send raw contact lists, payment card details, or unrelated device files to AI providers.</p>
+
+  <h2>3g. Construction Drills</h2>
+  <p>You can choose to focus a practice session on a specific grammar construction (e.g. "Present Perfect for experiences"). When a drill is active, the AI scores how often you used the construction correctly during the session and stores the count alongside the lesson. The drill catalog itself is bundled with the app and contains no personal data; the score values are derived from your own answers, which we already store as part of the lesson.</p>
+
+  <h2>3h. Goals and progress visualisation</h2>
+  <p>You may set an optional learning goal (CEFR level by date, daily streak, or number of lessons by date). The goal is stored as a single row on your profile and can be changed or removed at any time. Progress is computed from your existing lesson and practice history; no new data is collected. The Activity heatmap is rendered from the same engagement events we already store as part of standard analytics.</p>
+
+  <h2>3a. Coach Memory</h2>
+  <p>To make AI coaching more personal, the Services maintain a small structured memory file about each learner. It is automatically populated by analysing your completed lessons and practice sessions and is used only as additional context when our AI providers generate explanations, exercises, and coaching responses for you.</p>
+  <ul>
+    <li><strong>What is stored:</strong> short English-language notes such as your stated learning goals, topics you say you enjoy, recurring trouble areas, and coaching preferences. Free accounts hold up to 8 such notes for up to 30 days; paid accounts may hold up to 50 notes with longer retention.</li>
+    <li><strong>What is not stored:</strong> we do not place raw audio, transcripts, contact details, or names of third parties (family, colleagues) into the memory file.</li>
+    <li><strong>Your control:</strong> you can view every note in the in-app “Coach memory” sheet and tap <em>Reset memory</em> at any time to delete the entire file. You can also disable future automatic refreshes for your account.</li>
+    <li><strong>Sharing:</strong> the memory file is not shared with other users. If you share a lesson via a share link, only the lesson itself is shared — never your memory file.</li>
+  </ul>
+
+  <h2>3f. Pronunciation hot spots</h2>
+  <p>For lessons that go through speech-to-text we identify the words the model recognised with the lowest confidence and surface them as a list inside the lesson view. This list is built only from your own lesson and confidence values that we already store as part of the lesson; no new data is collected.</p>
+
+  <h2>3d. Daily Challenge</h2>
+  <p>The Services may show a "60-second challenge" prompt on the home screen built from your own Coach Memory items, or from a small set of generic templates when no personal items exist. The prompt is generated and rendered inside the app and is not shared anywhere outside your account. Lessons originating from the Daily Challenge are stored alongside your other lessons with a small marker indicating that they were created from a daily prompt.</p>
+
+  <h2>3c. Voice Diary</h2>
+  <p>The Services may surface a "you a month ago vs you now" comparison built entirely from two of your own previous lessons. The comparison is rendered inside the app and is not sent or shared anywhere outside your account. The lesson data shown in this view is the same data already retained for the lessons themselves; no new processing purposes are introduced.</p>
+
+  <h2>3e. Tutor of the Day</h2>
+  <p>During AI Practice the assistant may present itself under one of a small set of guest-tutor personas with different accents (e.g. "Dev — Mumbai-English", "Hannah — Edinburgh"). The selection rotates daily and is computed deterministically from the date and your account identifier; it carries no personal data and creates no new processing purposes.</p>
+
+  <h2>3j. Persona-styled and action-rich push notifications</h2>
+  <p>If you opt in to notifications, the App may send short reminders styled in the voice of the coach persona you have selected (e.g. "Maya", "Sam"). The text is composed inside the App or by our edge functions from your existing in-app data — your last lesson date, current streak, and at most one short coaching phrase from your previous session. We do not send health data, contact details, or anything you have not already produced inside the App. Push payloads include a small action identifier so the App knows which screen to open when you tap; the action identifier is not personal data.</p>
+  <p>To deliver a push, the App registers your device's APNs token with our backend the first time you grant notification permission, and refreshes that token at most once every 24 hours. The token identifies your device to Apple's Push Notification service, contains no personal information, and is automatically retired by us when Apple reports it as no longer valid (e.g. you uninstalled the App). You can revoke notification permission at any time in iOS Settings; once revoked, our server stops scheduling push deliveries to your device.</p>
+
+  <h2>3k. Optimal push delivery time</h2>
+  <p>To avoid sending reminders at inconvenient hours, the App may compute a per-user "best hour to ping" from your historical app-open and lesson-finish events that we already retain as part of standard analytics. The computation runs server-side, returns a single hour value, and is cached for up to 24 hours. No new categories of data are collected; the result is used only to schedule push delivery for your own account.</p>
+
+  <h2>3i. Scripted demo onboarding</h2>
+  <p>The first time you launch the App, you may be invited into a 60-second scripted demo with two short voice prompts. Audio captured during the demo is processed identically to any other voice recording — streamed to our speech-to-text and language-model providers for transcription and a single coaching reply — and is then discarded. We do not create a lesson row, do not write to Coach Memory, and do not retain the audio, transcript, or feedback on our side. The demo runs once per account; afterwards a single boolean flag is stored locally on the device so it is not shown again.</p>
+
+  <h2>3b. Coach personality and celebration moments</h2>
+  <p>To make the AI coaching feel more personal, you can pick one of four built-in voice presets ("Maya", "Sam", "Viktor", "Casey"). Your selection is stored on your profile and used only as a styling instruction inside the AI system prompt — it does not change what data we collect about you and does not unlock any premium content.</p>
+  <p>The Services may also detect simple "breakthrough" moments from your own lesson history (e.g. your first lesson without grammar mistakes, returning after a pause). When detected, a short pre-rendered headline and message are stored alongside the lesson and shown once as an in-app overlay. We do not send these moments as push notifications in the current version.</p>
 
   <h2>4. Legal bases (EEA / UK users)</h2>
   <p>Where applicable, we rely on: performance of a contract (providing the Services); legitimate interests (security, improvement, analytics compatible with this Policy); consent where required (for example certain optional communications or non-essential cookies on any web properties); and legal obligation.</p>
@@ -66,6 +116,7 @@
 
   <h2>7. Your rights</h2>
   <p>Depending on your location, you may have rights to access, correct, delete, or export your personal data, and to object to or restrict certain processing. You may also have the right to lodge a complaint with a supervisory authority. To exercise these rights, contact us using the email you publish in the “Operator” section above.</p>
+  <p>You can initiate account deletion inside the App from the account menu by choosing <strong>Delete account</strong>. This permanently deletes your account and server-side lessons, transcripts, vocabulary, progress, coach memory, analytics linked to your account, and push tokens. App Store subscriptions remain managed by Apple and can be cancelled in your Apple account settings.</p>
   <p>If you use Sign in with Apple, you can also use Apple’s controls to manage what is shared with apps.</p>
 
   <h2>8. Children</h2>
@@ -78,7 +129,7 @@
   <p>We may update this Policy from time to time. We will post the updated version on this page and adjust the “Last updated” date. Material changes may require additional notice as required by law.</p>
 
   <h2>11. Contact</h2>
-  <p>For privacy questions, contact: <strong>[your-privacy-email@domain]</strong></p>
+  <p>For privacy questions, contact: <a href="mailto:ikorkod@gmail.com"><strong>ikorkod@gmail.com</strong></a></p>
 
   <footer>
     <p>This document is provided as a practical template and does not constitute legal advice. Have it reviewed by qualified counsel for your jurisdiction and business model.</p>
