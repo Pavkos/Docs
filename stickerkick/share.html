@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="apple-itunes-app" content="app-id=6759937423">
+  <meta property="og:title" content="StickerKick shared collection">
+  <meta property="og:description" content="Open a shared football card collection, trade list, or sell list in StickerKick.">
+  <meta property="og:type" content="website">
+  <title>StickerKick shared collection</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #101522;
+      --muted: #5c6575;
+      --line: #d9dee8;
+      --paper: #f7f8fb;
+      --surface: #ffffff;
+      --blue: #0b62f4;
+      --green: #16875a;
+      --warning: #a85b00;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    .shell {
+      width: min(760px, 100%);
+      margin: 0 auto;
+      min-height: 100svh;
+      padding: 28px 18px 44px;
+    }
+
+    .hero { padding: 18px 0 20px; }
+
+    .app-icon {
+      width: 58px;
+      height: 58px;
+      border-radius: 14px;
+      background:
+        radial-gradient(circle at 58% 34%, rgba(255,255,255,.82), transparent 0 5px),
+        linear-gradient(145deg, #0a2b57, #0b62f4 54%, #24c08b);
+      box-shadow: 0 14px 32px rgba(11, 98, 244, .24);
+      margin-bottom: 18px;
+    }
+
+    .eyebrow {
+      color: var(--green);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: .08em;
+      margin: 0 0 8px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-size: clamp(32px, 8vw, 54px);
+      letter-spacing: 0;
+      line-height: 1;
+      margin: 0;
+      max-width: 680px;
+    }
+
+    .lead {
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.45;
+      margin: 16px 0 0;
+      max-width: 620px;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 22px;
+    }
+
+    .button {
+      align-items: center;
+      border-radius: 8px;
+      display: inline-flex;
+      font-weight: 750;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 18px;
+      text-decoration: none;
+    }
+
+    .primary { background: var(--blue); color: white; }
+    .secondary { background: white; border: 1px solid var(--line); color: var(--ink); }
+
+    .code,
+    .metric,
+    .item,
+    .notice {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+
+    .code {
+      align-items: center;
+      display: flex;
+      gap: 12px;
+      justify-content: space-between;
+      margin-top: 18px;
+      padding: 14px;
+    }
+
+    .code span {
+      color: var(--muted);
+      display: block;
+      font-size: 13px;
+    }
+
+    .code strong {
+      display: block;
+      font-size: 22px;
+      line-height: 1.1;
+      word-break: break-all;
+    }
+
+    .copy {
+      appearance: none;
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      color: var(--ink);
+      cursor: pointer;
+      font-weight: 750;
+      min-height: 40px;
+      padding: 0 12px;
+    }
+
+    .metrics {
+      display: grid;
+      gap: 10px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      margin-top: 22px;
+    }
+
+    .metric { padding: 14px; }
+    .metric strong { display: block; font-size: 24px; line-height: 1.1; }
+    .metric span { color: var(--muted); display: block; font-size: 13px; margin-top: 5px; }
+
+    .section-title {
+      font-size: 18px;
+      margin: 26px 0 10px;
+    }
+
+    .list {
+      display: grid;
+      gap: 10px;
+    }
+
+    .item {
+      display: flex;
+      gap: 14px;
+      justify-content: space-between;
+      padding: 14px;
+    }
+
+    .item h2 {
+      font-size: 17px;
+      line-height: 1.2;
+      margin: 3px 0;
+    }
+
+    .item p {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.35;
+      margin: 0;
+    }
+
+    .item-label {
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 750;
+      text-transform: uppercase;
+    }
+
+    .price {
+      font-weight: 800;
+      min-width: max-content;
+    }
+
+    .notice {
+      color: var(--muted);
+      line-height: 1.45;
+      margin-top: 22px;
+      padding: 14px;
+    }
+
+    .notice.warning { color: var(--warning); }
+
+    .loading {
+      color: var(--muted);
+      font-size: 15px;
+      margin-top: 22px;
+    }
+
+    .hidden { display: none; }
+
+    @media (max-width: 540px) {
+      .actions, .item { flex-direction: column; }
+      .button, .copy { width: 100%; }
+      .metrics { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <section class="hero">
+      <div class="app-icon" aria-hidden="true"></div>
+      <p class="eyebrow">Football Card Price Scanner</p>
+      <h1 id="title">Open a shared collection</h1>
+      <p class="lead" id="description">Use StickerKick to open this collection, trade list, or sell list on your iPhone.</p>
+
+      <div class="code hidden" id="codeBox">
+        <div>
+          <span>Share code</span>
+          <strong id="shareCode"></strong>
+        </div>
+        <button class="copy" id="copyCode" type="button">Copy</button>
+      </div>
+
+      <div class="actions">
+        <a class="button primary" id="openApp" href="stickerkick://collection">Open in app</a>
+        <a class="button secondary" href="https://apps.apple.com/app/id6759937423">Get the app</a>
+      </div>
+    </section>
+
+    <div class="loading" id="loading">Loading shared collection...</div>
+    <section class="metrics hidden" id="metrics"></section>
+    <h2 class="section-title hidden" id="itemsTitle">Cards</h2>
+    <section class="list hidden" id="items"></section>
+    <div class="notice hidden" id="notice"></div>
+  </main>
+
+  <script>
+    const SUPABASE_URL = "https://zupoesmuehmjescypmak.supabase.co";
+    const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inp1cG9lc211ZWhtamVzY3lwbWFrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQ5NzExODgsImV4cCI6MjA5MDU0NzE4OH0.ddNocKlx3G1QVj1sM7iKeU-w7ziFasCQPhbTXV0TAqM";
+    const APP_STORE_URL = "https://apps.apple.com/app/id6759937423";
+
+    const title = document.getElementById("title");
+    const description = document.getElementById("description");
+    const codeBox = document.getElementById("codeBox");
+    const shareCode = document.getElementById("shareCode");
+    const copyCode = document.getElementById("copyCode");
+    const openApp = document.getElementById("openApp");
+    const loading = document.getElementById("loading");
+    const metrics = document.getElementById("metrics");
+    const itemsTitle = document.getElementById("itemsTitle");
+    const items = document.getElementById("items");
+    const notice = document.getElementById("notice");
+
+    function sanitizeCode(value) {
+      return String(value || "").trim().replace(/[^a-zA-Z0-9_-]/g, "").slice(0, 80);
+    }
+
+    function getShareCode() {
+      const params = new URLSearchParams(window.location.search);
+      const fromQuery = params.get("code") || params.get("slug");
+      if (fromQuery) return sanitizeCode(fromQuery);
+
+      const parts = window.location.pathname.split("/").filter(Boolean);
+      const last = parts[parts.length - 1] || "";
+      return last.endsWith(".html") ? "" : sanitizeCode(last);
+    }
+
+    function money(value) {
+      const number = Number(value);
+      return Number.isFinite(number) && number > 0 ? "$" + number.toFixed(2) : "";
+    }
+
+    function itemLabel(item) {
+      const type = String(item.item_type || "card").replaceAll("_", " ");
+      const code = item.sticker_code ? "#" + item.sticker_code : "";
+      const quantity = Number(item.quantity || 0) > 1 ? "x" + item.quantity : "";
+      return [type, code, quantity].filter(Boolean).join(" · ");
+    }
+
+    function renderMetric(value, label) {
+      const node = document.createElement("div");
+      node.className = "metric";
+      node.innerHTML = "<strong></strong><span></span>";
+      node.querySelector("strong").textContent = value;
+      node.querySelector("span").textContent = label;
+      return node;
+    }
+
+    function renderItem(item) {
+      const node = document.createElement("article");
+      node.className = "item";
+      const main = document.createElement("div");
+      const label = document.createElement("div");
+      const heading = document.createElement("h2");
+      const subtitle = document.createElement("p");
+      const price = document.createElement("div");
+
+      label.className = "item-label";
+      label.textContent = itemLabel(item);
+      heading.textContent = item.title || "Football card";
+      subtitle.textContent = item.subtitle || item.note || "Open in StickerKick for details.";
+      price.className = "price";
+      price.textContent = money(item.asking_price_usd);
+
+      main.append(label, heading, subtitle);
+      node.append(main);
+      if (price.textContent) node.append(price);
+      return node;
+    }
+
+    async function request(path, options) {
+      const response = await fetch(SUPABASE_URL + path, {
+        ...options,
+        headers: {
+          apikey: SUPABASE_ANON_KEY,
+          Authorization: "Bearer " + SUPABASE_ANON_KEY,
+          "Content-Type": "application/json",
+          ...(options && options.headers ? options.headers : {})
+        }
+      });
+
+      if (!response.ok) throw new Error("Request failed");
+      return response.text().then((text) => text ? JSON.parse(text) : null);
+    }
+
+    async function trackWebOpen(code, shared) {
+      try {
+        await request("/rest/v1/stickerkick_events", {
+          method: "POST",
+          headers: { Prefer: "return=minimal" },
+          body: JSON.stringify({
+            event_name: "shared_collection_web_opened",
+            device_id: "web:" + code,
+            app_version: "web-share",
+            locale: navigator.language || null,
+            properties: {
+              source: "github_pages_share_fallback",
+              share_slug: code,
+              list_id: shared && shared.list ? shared.list.id : null,
+              list_type: shared && shared.list ? shared.list.list_type : null,
+              items_count: shared && shared.items ? shared.items.length : 0,
+              referrer: document.referrer || null,
+              user_agent: navigator.userAgent ? navigator.userAgent.slice(0, 240) : null
+            }
+          })
+        });
+      } catch (_) {}
+    }
+
+    async function load() {
+      const code = getShareCode();
+      if (!code) {
+        loading.classList.add("hidden");
+        notice.className = "notice warning";
+        notice.textContent = "No share code was found. Open the link again from StickerKick or paste the code in the app.";
+        notice.classList.remove("hidden");
+        return;
+      }
+
+      const deepLink = "stickerkick://collection/" + encodeURIComponent(code);
+      openApp.href = deepLink;
+      shareCode.textContent = code;
+      codeBox.classList.remove("hidden");
+      copyCode.addEventListener("click", async () => {
+        await navigator.clipboard.writeText(code);
+        copyCode.textContent = "Copied";
+        setTimeout(() => { copyCode.textContent = "Copy"; }, 1400);
+      });
+
+      let shared = null;
+      try {
+        shared = await request("/rest/v1/rpc/stickerkick_get_shared_collection_list", {
+          method: "POST",
+          body: JSON.stringify({ p_share_slug: code })
+        });
+      } catch (_) {
+        shared = null;
+      }
+
+      await trackWebOpen(code, shared);
+      loading.classList.add("hidden");
+
+      if (!shared || !shared.list) {
+        notice.className = "notice warning";
+        notice.textContent = "The public preview is not available yet. Open the app and use the share code above.";
+        notice.classList.remove("hidden");
+        return;
+      }
+
+      const list = shared.list;
+      const listItems = Array.isArray(shared.items) ? shared.items : [];
+      title.textContent = list.title || "Shared card collection";
+      description.textContent = list.description || "Open this list in StickerKick to save cards, track prices, and manage your collection.";
+      document.title = title.textContent + " - StickerKick";
+
+      const totalAsking = listItems.reduce((sum, item) => sum + (Number(item.asking_price_usd) || 0), 0);
+      metrics.append(
+        renderMetric(String(listItems.length), "cards in this list"),
+        renderMetric(list.list_type || "collection", "list type")
+      );
+      if (totalAsking > 0) {
+        metrics.append(renderMetric(money(totalAsking), "asking total"));
+      }
+      metrics.classList.remove("hidden");
+
+      if (listItems.length > 0) {
+        itemsTitle.classList.remove("hidden");
+        listItems.slice(0, 24).forEach((item) => items.append(renderItem(item)));
+        items.classList.remove("hidden");
+      }
+
+      if (listItems.length > 24) {
+        notice.textContent = "Showing the first 24 cards. Open the app to view the full list.";
+        notice.classList.remove("hidden");
+      }
+    }
+
+    load();
+  </script>
+</body>
+</html>
