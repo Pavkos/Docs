@@ -23,7 +23,7 @@
     <section class="hero">
       <div class="eyebrow">Privacy Policy</div>
       <h1>Privacy Policy</h1>
-      <p class="lead">This policy explains how Aura Migraine Log handles migraine/headache logs, medication timestamps, daily baseline logs, reports, exports, subscriptions and minimal product analytics.</p>
+      <p class="lead">This policy explains how Aura Migraine Log handles migraine/headache logs, medication timestamps, daily baseline logs, pressure forecast, reports, exports, subscriptions and minimal product analytics.</p>
       <p class="meta">Last updated: May 23, 2026</p>
       <p><span class="lang">English + Русский</span></p>
     </section>
@@ -42,7 +42,8 @@
         <li>medication names, classes, dose notes, timestamps, response notes and user-configured medication-day thresholds;</li>
         <li>daily baseline logs, time-block pain levels, flare markers, aura/prodrome/postdrome/vestibular phase labels, symptoms and notes;</li>
         <li>appointment-prep text, clinician name, usual medication notes, report preferences and questions for a clinician;</li>
-        <li>setup preferences such as tracking goal, migraine pattern, comfort settings and safety-notice acknowledgement.</li>
+        <li>setup preferences such as tracking goal, migraine pattern, comfort settings and safety-notice acknowledgement;</li>
+        <li>cached barometric pressure forecast summary and local pressure-notification preference if you enable pressure forecast.</li>
       </ul>
       <p lang="ru">Вы можете вводить чувствительные данные о здоровье: записи о мигрени/головной боли, интенсивность, длительность, симптомы, предполагаемые связи, лекарства, временные метки приема, дневные базовые отметки, фазы симптомов, заметки и подготовку к приему у врача.</p>
     </section>
@@ -54,13 +55,23 @@
     </section>
 
     <section class="panel">
+      <h2>Optional Pressure Forecast</h2>
+      <p>Pressure forecast is optional. If you choose to enable it, Aura Migraine Log requests when-in-use location permission and uses approximate location with Apple's WeatherKit / Apple Weather service to fetch local barometric pressure context.</p>
+      <p>The app uses this data to show a 7-day pressure-shift view and, if you enable notifications, schedule local pressure-shift notifications on the device. Pressure notifications are generated locally from the latest saved forecast. Aura Migraine Log does not send migraine/headache diary content, medication logs, notes, report text or exported files with weather requests.</p>
+      <p>The developer does not operate a weather or location server for this feature. Weather data requests are handled through Apple's WeatherKit service. Cached pressure summaries can be removed from the device by using Delete Local Data in the Privacy &amp; Data screen.</p>
+      <p lang="ru">Прогноз давления необязателен. Если вы включаете эту функцию, Aura Migraine Log запрашивает разрешение на геолокацию при использовании приложения и использует приблизительное местоположение через Apple WeatherKit / Apple Weather, чтобы получить локальный контекст атмосферного давления.</p>
+      <p lang="ru">Приложение использует эти данные, чтобы показать прогноз изменения давления на 7 дней и, если вы включили уведомления, запланировать локальные уведомления о заметном изменении давления. Уведомления создаются локально на устройстве на основе последнего сохраненного прогноза. Aura Migraine Log не отправляет записи дневника мигрени/головной боли, лекарства, заметки, текст отчета или экспортированные файлы вместе с погодными запросами.</p>
+      <p lang="ru">У разработчика нет отдельного сервера погоды или геолокации для этой функции. Погодные запросы обрабатываются сервисом Apple WeatherKit. Кэшированные сводки давления можно удалить через Delete Local Data на экране Privacy &amp; Data.</p>
+    </section>
+
+    <section class="panel">
       <h2>Product Analytics</h2>
-      <p>Aura Migraine Log may send minimal product-flow analytics to Amplitude to understand whether core app flows work after release. These events are limited to actions such as app opened, onboarding completed, paywall viewed, purchase result, quick log saved, medication dose logged, doctor report created, data export created and local data deleted.</p>
+      <p>Aura Migraine Log may send minimal product-flow analytics to Amplitude to understand whether core app flows work after release. These events are limited to actions such as app opened, onboarding completed, paywall viewed, purchase result, quick log saved, medication dose logged, pressure forecast opened/refreshed, doctor report created, data export created and local data deleted.</p>
       <p>Analytics events are sent directly from the app to Amplitude over HTTPS. They use a random app installation identifier stored on the device. The app does not use IDFA, advertising tracking, cross-app tracking, account identifiers, precise location, HealthKit data, contacts or email addresses for analytics.</p>
-      <p>Analytics events do not include migraine/headache notes, doctor-report text, medication names, dose notes, pain intensity values, symptoms, suspected triggers, aura/prodrome/postdrome details, daily baseline values or exported report content. You can turn product analytics off from the Privacy &amp; Data screen. Turning it off stops future analytics events; deleting local app data resets the local analytics identifier.</p>
-      <p lang="ru">Aura Migraine Log может отправлять минимальную продуктовую аналитику в Amplitude, чтобы понимать, работают ли ключевые сценарии приложения после релиза. События ограничены действиями вроде открытия приложения, завершения onboarding, показа paywall, результата покупки, сохранения quick log, отметки приема лекарства, создания отчета для врача, экспорта данных и удаления локальных данных.</p>
+      <p>Analytics events do not include migraine/headache notes, doctor-report text, medication names, dose notes, pain intensity values, symptoms, suspected triggers, aura/prodrome/postdrome details, daily baseline values, exported report content, coordinates, location names or barometric pressure values. You can turn product analytics off from the Privacy &amp; Data screen. Turning it off stops future analytics events; deleting local app data resets the local analytics identifier.</p>
+      <p lang="ru">Aura Migraine Log может отправлять минимальную продуктовую аналитику в Amplitude, чтобы понимать, работают ли ключевые сценарии приложения после релиза. События ограничены действиями вроде открытия приложения, завершения onboarding, показа paywall, результата покупки, сохранения quick log, отметки приема лекарства, открытия/обновления прогноза давления, создания отчета для врача, экспорта данных и удаления локальных данных.</p>
       <p lang="ru">События аналитики отправляются напрямую из приложения в Amplitude по HTTPS. Для них используется случайный идентификатор установки приложения, который хранится на устройстве. Приложение не использует IDFA, рекламное отслеживание, cross-app tracking, аккаунтные идентификаторы, точную геолокацию, HealthKit, контакты или email для аналитики.</p>
-      <p lang="ru">События аналитики не содержат заметки о мигрени/головной боли, текст отчета для врача, названия лекарств, заметки о дозах, значения интенсивности боли, симптомы, предполагаемые триггеры, детали aura/prodrome/postdrome, дневные baseline-значения или содержимое экспортированных отчетов. Аналитику можно выключить на экране Privacy &amp; Data. Выключение останавливает будущие события; удаление локальных данных сбрасывает локальный идентификатор аналитики.</p>
+      <p lang="ru">События аналитики не содержат заметки о мигрени/головной боли, текст отчета для врача, названия лекарств, заметки о дозах, значения интенсивности боли, симптомы, предполагаемые триггеры, детали aura/prodrome/postdrome, дневные baseline-значения, содержимое экспортированных отчетов, координаты, названия локаций или значения атмосферного давления. Аналитику можно выключить на экране Privacy &amp; Data. Выключение останавливает будущие события; удаление локальных данных сбрасывает локальный идентификатор аналитики.</p>
     </section>
 
     <section class="panel">
@@ -77,8 +88,8 @@
 
     <section class="panel">
       <h2>Third Parties</h2>
-      <p>The app uses Apple StoreKit for subscriptions and Amplitude for the minimal product-flow analytics described above. It does not include advertising SDKs, third-party analytics SDK autocapture, AI/cloud processing, HealthKit import, weather/location collection, microphone recording, account login or developer-server sync for diary content.</p>
-      <p lang="ru">Приложение использует Apple StoreKit для подписок и Amplitude для минимальной продуктовой аналитики, описанной выше. В приложении нет рекламных SDK, автоматического сбора через сторонний analytics SDK, AI/cloud-обработки, импорта HealthKit, сбора погоды/геолокации, записи с микрофона, логина или синхронизации дневника с сервером разработчика.</p>
+      <p>The app uses Apple StoreKit for subscriptions, Apple WeatherKit / Apple Weather for optional pressure forecast and Amplitude for the minimal product-flow analytics described above. It does not include advertising SDKs, third-party analytics SDK autocapture, AI/cloud processing, HealthKit import, microphone recording, account login or developer-server sync for diary content.</p>
+      <p lang="ru">Приложение использует Apple StoreKit для подписок, Apple WeatherKit / Apple Weather для необязательного прогноза давления и Amplitude для минимальной продуктовой аналитики, описанной выше. В приложении нет рекламных SDK, автоматического сбора через сторонний analytics SDK, AI/cloud-обработки, импорта HealthKit, записи с микрофона, логина или синхронизации дневника с сервером разработчика.</p>
     </section>
 
     <section class="panel">
