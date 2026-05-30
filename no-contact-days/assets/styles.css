@@ -34,6 +34,24 @@ a:hover {
   text-decoration: underline;
 }
 
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 11px 18px;
+  border-radius: 8px;
+  background: var(--plum);
+  color: white;
+  font-weight: 760;
+  box-shadow: 0 12px 30px rgba(46, 16, 38, .18);
+}
+
+.button:hover {
+  text-decoration: none;
+  background: #461539;
+}
+
 .shell {
   width: min(940px, calc(100% - 32px));
   margin: 0 auto;
@@ -183,4 +201,3 @@ li {
     padding-top: 48px;
   }
 }
-
