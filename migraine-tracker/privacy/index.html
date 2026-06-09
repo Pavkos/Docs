@@ -24,7 +24,7 @@
       <div class="eyebrow">Privacy Policy</div>
       <h1>Privacy Policy</h1>
       <p class="lead">This policy explains how Aura Migraine Log handles migraine/headache logs, medication timestamps, daily baseline logs, pressure forecast, reports, exports, subscriptions and minimal product analytics.</p>
-      <p class="meta">Last updated: May 23, 2026</p>
+      <p class="meta">Last updated: June 10, 2026</p>
       <p><span class="lang">English + Русский</span></p>
     </section>
 
@@ -66,11 +66,11 @@
 
     <section class="panel">
       <h2>Product Analytics</h2>
-      <p>Aura Migraine Log may send minimal product-flow analytics to Amplitude to understand whether core app flows work after release. These events are limited to actions such as app opened, onboarding completed, paywall viewed, purchase result, quick log saved, medication dose logged, pressure forecast opened/refreshed, doctor report created, data export created and local data deleted.</p>
-      <p>Analytics events are sent directly from the app to Amplitude over HTTPS. They use a random app installation identifier stored on the device. The app does not use IDFA, advertising tracking, cross-app tracking, account identifiers, precise location, HealthKit data, contacts or email addresses for analytics.</p>
+      <p>Aura Migraine Log may send minimal product-flow analytics to Amplitude and Supabase to understand whether core app flows work after release. These events are limited to actions such as app opened, onboarding completed, paywall viewed, purchase result, quick log saved, medication dose logged, pressure forecast opened/refreshed, doctor report created, data export created and local data deleted.</p>
+      <p>Analytics events are sent directly from the app to Amplitude and Supabase over HTTPS. They use a random app installation identifier stored on the device. The app does not use IDFA, advertising tracking, cross-app tracking, account identifiers, precise location, HealthKit data, contacts or email addresses for analytics.</p>
       <p>Analytics events do not include migraine/headache notes, doctor-report text, medication names, dose notes, pain intensity values, symptoms, suspected triggers, aura/prodrome/postdrome details, daily baseline values, exported report content, coordinates, location names or barometric pressure values. You can turn product analytics off from the Privacy &amp; Data screen. Turning it off stops future analytics events; deleting local app data resets the local analytics identifier.</p>
-      <p lang="ru">Aura Migraine Log может отправлять минимальную продуктовую аналитику в Amplitude, чтобы понимать, работают ли ключевые сценарии приложения после релиза. События ограничены действиями вроде открытия приложения, завершения onboarding, показа paywall, результата покупки, сохранения quick log, отметки приема лекарства, открытия/обновления прогноза давления, создания отчета для врача, экспорта данных и удаления локальных данных.</p>
-      <p lang="ru">События аналитики отправляются напрямую из приложения в Amplitude по HTTPS. Для них используется случайный идентификатор установки приложения, который хранится на устройстве. Приложение не использует IDFA, рекламное отслеживание, cross-app tracking, аккаунтные идентификаторы, точную геолокацию, HealthKit, контакты или email для аналитики.</p>
+      <p lang="ru">Aura Migraine Log может отправлять минимальную продуктовую аналитику в Amplitude и Supabase, чтобы понимать, работают ли ключевые сценарии приложения после релиза. События ограничены действиями вроде открытия приложения, завершения onboarding, показа paywall, результата покупки, сохранения quick log, отметки приема лекарства, открытия/обновления прогноза давления, создания отчета для врача, экспорта данных и удаления локальных данных.</p>
+      <p lang="ru">События аналитики отправляются напрямую из приложения в Amplitude и Supabase по HTTPS. Для них используется случайный идентификатор установки приложения, который хранится на устройстве. Приложение не использует IDFA, рекламное отслеживание, cross-app tracking, аккаунтные идентификаторы, точную геолокацию, HealthKit, контакты или email для аналитики.</p>
       <p lang="ru">События аналитики не содержат заметки о мигрени/головной боли, текст отчета для врача, названия лекарств, заметки о дозах, значения интенсивности боли, симптомы, предполагаемые триггеры, детали aura/prodrome/postdrome, дневные baseline-значения, содержимое экспортированных отчетов, координаты, названия локаций или значения атмосферного давления. Аналитику можно выключить на экране Privacy &amp; Data. Выключение останавливает будущие события; удаление локальных данных сбрасывает локальный идентификатор аналитики.</p>
     </section>
 
@@ -82,14 +82,14 @@
 
     <section class="panel">
       <h2>Subscriptions and Payments</h2>
-      <p>Purchases are handled by Apple through StoreKit. The app may read subscription entitlement state, product identifiers and transaction status needed to unlock paid features. Aura Migraine Log does not collect full payment card details.</p>
-      <p lang="ru">Покупки обрабатываются Apple через StoreKit. Приложение может читать статус подписки, идентификаторы продуктов и состояние транзакции, необходимые для открытия платных функций. Aura Migraine Log не получает полные данные банковской карты.</p>
+      <p>Purchases are handled by Apple through StoreKit. The app may read subscription entitlement state, product identifiers and transaction status needed to unlock paid features. RevenueCat is used to sync purchase state and entitlement access after StoreKit purchases or restores. RevenueCat's SDK privacy manifest declares purchase history for app functionality, not linked to the user's identity and not used for tracking. Aura Migraine Log does not collect full payment card details.</p>
+      <p lang="ru">Покупки обрабатываются Apple через StoreKit. Приложение может читать статус подписки, идентификаторы продуктов и состояние транзакции, необходимые для открытия платных функций. RevenueCat используется для синхронизации статуса покупок и доступа к подписке после покупки или восстановления через StoreKit. Privacy manifest SDK RevenueCat указывает purchase history для функциональности приложения, без привязки к личности пользователя и без tracking. Aura Migraine Log не получает полные данные банковской карты.</p>
     </section>
 
     <section class="panel">
       <h2>Third Parties</h2>
-      <p>The app uses Apple StoreKit for subscriptions, Apple WeatherKit / Apple Weather for optional pressure forecast and Amplitude for the minimal product-flow analytics described above. It does not include advertising SDKs, third-party analytics SDK autocapture, AI/cloud processing, HealthKit import, microphone recording, account login or developer-server sync for diary content.</p>
-      <p lang="ru">Приложение использует Apple StoreKit для подписок, Apple WeatherKit / Apple Weather для необязательного прогноза давления и Amplitude для минимальной продуктовой аналитики, описанной выше. В приложении нет рекламных SDK, автоматического сбора через сторонний analytics SDK, AI/cloud-обработки, импорта HealthKit, записи с микрофона, логина или синхронизации дневника с сервером разработчика.</p>
+      <p>The app uses Apple StoreKit for subscriptions, RevenueCat for subscription entitlement sync, Apple WeatherKit / Apple Weather for optional pressure forecast, and Amplitude and Supabase for the minimal product-flow analytics described above. It does not include advertising SDKs, third-party analytics SDK autocapture, AI/cloud processing, HealthKit import, microphone recording, account login or developer-server sync for diary content.</p>
+      <p lang="ru">Приложение использует Apple StoreKit для подписок, RevenueCat для синхронизации доступа к подписке, Apple WeatherKit / Apple Weather для необязательного прогноза давления, а также Amplitude и Supabase для минимальной продуктовой аналитики, описанной выше. В приложении нет рекламных SDK, автоматического сбора через сторонний analytics SDK, AI/cloud-обработки, импорта HealthKit, записи с микрофона, логина или синхронизации дневника с сервером разработчика.</p>
     </section>
 
     <section class="panel">
