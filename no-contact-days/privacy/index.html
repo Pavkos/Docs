@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Privacy Policy - No Contact: Days Since</title>
-  <meta name="description" content="Privacy Policy for No Contact: Days Since.">
+  <title>Privacy Policy - MendKit: No Contact Tracker</title>
+  <meta name="description" content="Privacy Policy for MendKit: No Contact Tracker.">
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 <body>
   <header class="topbar">
     <div class="shell nav">
-      <a class="brand" href="../">After Us: Breakup Reset</a>
+      <a class="brand" href="../">MendKit: No Contact Tracker</a>
       <nav class="nav-links" aria-label="Legal navigation">
         <a href="../privacy/">Privacy</a>
         <a href="../support/">Support</a>
@@ -22,13 +22,13 @@
     <section class="hero">
       <div class="eyebrow">Privacy Policy</div>
       <h1>Privacy Policy</h1>
-      <p class="lead">This policy explains how No Contact: Days Since handles information used for breakup day counting, no-contact tracking, mood check-ins, journals, hard dates, sealed letters, contact logs and paid access.</p>
-      <p class="meta">Last updated: May 7, 2026</p>
+      <p class="lead">This policy explains how MendKit: No Contact Tracker handles information used for breakup day counting, no-contact tracking, mood check-ins, journals, hard dates, sealed letters, contact logs and paid access.</p>
+      <p class="meta">Last updated: October 11, 2026</p>
     </section>
 
     <section class="panel notice">
       <h2>Health and Safety</h2>
-      <p>The app is a private tracker and supportive tool. It is not a medical device, does not provide diagnosis or treatment, and is not a substitute for a therapist, physician, crisis line or emergency service.</p>
+      <p>The app is a personal tracker and supportive tool. It is not a medical device, does not provide diagnosis or treatment, and is not a substitute for a therapist, physician, crisis line or emergency service.</p>
     </section>
 
     <section class="panel">
@@ -50,22 +50,24 @@
       <p>Deleting the app removes local app data from that device. If you export or share any information outside the app in the future, that copy will be controlled by the destination you choose.</p>
     </section>
 
-    <section class="panel">
+    <section class="panel" id="analytics">
       <h2>Product Analytics</h2>
-      <p>If product analytics are enabled in the app build and you leave analytics sharing turned on, the app may send anonymous product analytics events to Amplitude. Examples include app opened, onboarding completed, flow completed, paywall viewed, purchase started or purchase completed.</p>
-      <p>Analytics events are limited to event names, feature names, counts, boolean flags and broad buckets such as mood range or breakup day range. The app is designed not to send journal text, sealed letters, message drafts, transcripts, names, notes, hard-date titles, no-contact plan text or other user-written content to analytics.</p>
-      <p>You can turn anonymous product analytics off in the app's Settings screen.</p>
+      <p>When analytics sharing is on, MendKit sends product analytics to our Supabase backend to understand feature usage, reliability and purchase flows. The app also supports Amplitude in builds where that service is configured.</p>
+      <p>Events include an event name, app version, device locale, timestamps, a randomly generated installation identifier and an identifier for each event. The installation identifier links events from the same app installation; these events are pseudonymous, not anonymous. Amplitude, when configured, also receives platform and operating-system information.</p>
+      <p>Event properties can include feature names and choices, counts, true/false flags, broad mood and emotional-intensity ranges, breakup-day ranges, subscription product identifiers and purchase/restore outcomes, and technical status or error indicators. These properties can describe aspects of your wellbeing and how you use the app.</p>
+      <p>Product analytics do not include your journal text, sealed-letter text, message drafts, transcripts, audio recordings, names, notes, hard-date titles or no-contact plan text.</p>
+      <p>You can turn product analytics off in Settings. Further analytics attempts stop while it is off; a request already in progress may finish. Deleting local app data or deleting the app does not automatically delete analytics already sent to a server. For questions about data sent off your device, contact us below.</p>
     </section>
 
     <section class="panel">
       <h2>Voice Transcription</h2>
-      <p>If voice transcription is enabled, audio is sent to a transcription provider such as Deepgram, or to a secure proxy that forwards the request, only when you choose to record and transcribe a voice journal entry. The returned transcript is saved in your private local journal unless you delete it.</p>
+      <p>If voice transcription is enabled, audio is sent to a transcription provider such as Deepgram, or to our transcription proxy that forwards the request, only when you choose to record and transcribe a voice journal entry. The returned transcript is saved in your local journal unless you delete it.</p>
       <p>If transcription is not configured in a build, voice journal entries remain local and no audio is uploaded for transcription.</p>
     </section>
 
     <section class="panel">
       <h2>StoreKit Purchases</h2>
-      <p>Purchases are handled by Apple through StoreKit. The app may receive product identifiers, entitlement status and transaction status needed to unlock No Contact Plus. We do not receive your full payment card details.</p>
+      <p>Purchases are handled by Apple through StoreKit. The app may receive product identifiers, entitlement status and transaction status needed to unlock MendKit Plus. We do not receive your full payment card details.</p>
     </section>
 
     <section class="panel">
@@ -91,6 +93,17 @@
     <section class="panel">
       <h2>Changes</h2>
       <p>We may update this Privacy Policy as the app changes. If data practices materially change, the policy and App Store privacy information should be updated.</p>
+    </section>
+
+    <section class="panel" lang="ru" id="russian-summary">
+      <h2>Кратко об обработке данных</h2>
+      <p>MendKit хранит дневник, письма, план личных границ, отметки настроения и журнал контактов на устройстве. Эти локальные записи не являются публичным профилем или лентой сообщества.</p>
+      <p>Если аналитика включена, приложение отправляет события в наш сервис на Supabase. В сборках, где отдельно настроен Amplitude, события могут передаваться и в этот сервис. Они нужны для анализа использования функций, стабильности и покупок.</p>
+      <p>События содержат название действия, версию приложения, язык и регион устройства, время, случайный идентификатор установки и идентификатор события. Идентификатор установки связывает события одной установки между собой: это псевдонимные, а не анонимные данные. При использовании Amplitude также передаются сведения об операционной системе.</p>
+      <p>Свойства событий могут включать выбранные функции и варианты действий, счётчики, признаки да/нет, диапазоны настроения и эмоциональной интенсивности, диапазон дней после расставания, идентификаторы подписок, результаты покупки или восстановления доступа и технические статусы. Тексты дневника, писем, сообщений, расшифровок, заметок и плана, названия сложных дат, имена и аудиозаписи не передаются в продуктовую аналитику.</p>
+      <p>Аналитику можно выключить в настройках. Пока она выключена, новые попытки отправки не выполняются; уже начатый запрос может завершиться. Удаление приложения или локальных записей не удаляет автоматически ранее отправленные события с сервера.</p>
+      <p>Голосовая расшифровка — отдельная необязательная функция: при её использовании аудио передаётся в Deepgram или через наш сервер-посредник, а полученный текст сохраняется в локальном дневнике. Покупки обрабатывает Apple; полные реквизиты банковской карты приложение не получает.</p>
+      <p>По вопросам обработки данных используйте <a href="../support/">страницу поддержки</a> или адрес электронной почты ниже. Подробные разделы политики приведены на этой странице на английском языке.</p>
     </section>
 
     <section class="panel">
